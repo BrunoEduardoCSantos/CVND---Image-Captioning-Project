@@ -31,6 +31,7 @@ Mathematically, the expression is the following:
 where *i* is the ignoring factor given by a sigmoide between 0 and 1.
 
 The forget gate is simply using long-term memories and forget part of it, creating a new memory.
+
 [image_2]: http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-focus-f.png 
 ![Forget gate][image_2] 
 
