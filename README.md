@@ -13,8 +13,9 @@ The project includes the following files:
 
 ## Understanding LSTMs 
 Long-Short-Term-Memory network is a sequential architecture that allows to solve long-term dependency problems. Remembering information for long periods of time is practically their default behavior. 
-[!LSTMs architecture](http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-chain.png)
 
+[image_0]: http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-chain.png
+![LSTMs architecture][image_0] 
 
 ## Dataset  
 1. Clone this repo: https://github.com/cocodataset/cocoapi  
