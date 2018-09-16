@@ -16,6 +16,18 @@ Long-Short-Term-Memory network is a sequential architecture that allows to solve
 
 [image_0]: http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-chain.png
 ![LSTMs architecture][image_0] 
+In order to achieve this long term behaviour LSTMs use 4 stages/gates as follows:
+* Forget gate
+* Learn gate
+* Remember gate
+* Use gate
+
+The learn gate is a combination of current events with parts of long-term memory that weren't ignored by pass-through factor. 
+Mathematically, the expression is the following:
+[image_1]:https://d17h27t6h515a5.cloudfront.net/topher/2017/November/5a0e2cc3_screen-shot-2017-11-16-at-4.26.22-pm/screen-shot-2017-11-16-at-4.26.22-pm.png 
+![Learn gate][image_1] 
+
+
 
 ## Dataset  
 1. Clone this repo: https://github.com/cocodataset/cocoapi  
