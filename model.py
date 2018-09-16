@@ -13,8 +13,12 @@ class EncoderCNN(nn.Module):
         modules = list(resnet.children())[:-1]
         self.resnet = nn.Sequential(*modules)
         self.embed = nn.Linear(resnet.fc.in_features, embed_size)
-
+        self.batch= nn.BacthNorm1D(embed_size,momentum = 0.01)
+        self.embed.weight.data.normal_(0., 0.02)
+        self.embed.bias.data.fill_(0)
+        
     def forward(self, images):
+        images = self.batch(images)
         features = self.resnet(images)
         features = features.view(features.size(0), -1)
         features = self.embed(features)
@@ -34,14 +38,20 @@ class DecoderRNN(nn.Module):
         self.dropout = nn.Dropout(self.drop_prob)
         self.embed = nn.Embedding(self.vocabulary_size, self.embed_size)
         self.linear = nn.Linear(hidden_size, self.vocabulary_size)
+        #Weight initialization
+        self.embed.weight.data.uniform_(-0.1, 0.1)
+        self.linear.weight.data.uniform_(-0.1, 0.1)
+        self.linear.bias.data.fill_(0)
+        self.batch= nn.BacthNorm1D(self.embed_size,momentum = 0.01)
         
     def forward(self, features, captions):
+        
         #generating embedings from captures labels
         embeddings = self.embed(captions)
         #Concatenate captions embedidings and images features in one dimension array
         features = features.unsqueeze(1)
         embeddings = torch.cat((features, embeddings[:, :-1,:]), dim=1)
-
+        embeddings= self.batch(embeddings)
         #Pack in sequences to create several batches with sequence length vocabulary size
         #packed = torch.nn.utils.rnn.pack_padded_sequence(embeddings, self.vocabulary_size,batch_first= True) 
         #LSTM return hidden states and output of LSTM layers (score telling how near we are from finding the right word sequence)
