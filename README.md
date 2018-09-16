@@ -1,5 +1,7 @@
 # Image-Captioning
+
 In this project, a neural network architecture to automatically generate captions from images.
+
 After using the Microsoft Common Objects in COntext (MS COCO) dataset to train  the network, new captions will be generated based on new images. 
 
 ## Dataset  
@@ -27,4 +29,4 @@ cd ..
   * **2014 Test images [41K/6GB]** (extract the test2014 folder and place at location cocoapi/images/test2014/)
 
 ## References
-* [Understand LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)
+* [Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) by Chris Olah
