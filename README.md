@@ -4,6 +4,13 @@ In this project, a neural network architecture to automatically generate caption
 
 After using the Microsoft Common Objects in COntext (MS COCO) dataset to train  the network, new captions will be generated based on new images. 
 
+## Project Files
+
+The project includes the following files:
+*  [model](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/model.py): containing the model architecture.
+* [training](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/2_Training.ipynb): data pre-processing and training pipeline .
+* [inference](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/3_Inference.ipynb): generate captions on test dataset using the trained model.
+
 ## Dataset  
 1. Clone this repo: https://github.com/cocodataset/cocoapi  
 ```
