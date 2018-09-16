@@ -1,6 +1,8 @@
-# CVND---Image-Captioning-Project
+# Image-Captioning-Project
 
-# Instructions  
+
+
+## Dataset  
 1. Clone this repo: https://github.com/cocodataset/cocoapi  
 ```
 git clone https://github.com/cocodataset/cocoapi.git  
