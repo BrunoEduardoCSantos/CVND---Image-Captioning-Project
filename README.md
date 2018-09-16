@@ -11,6 +11,11 @@ The project includes the following files:
 * [training](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/2_Training.ipynb): data pre-processing and training pipeline .
 * [inference](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/3_Inference.ipynb): generate captions on test dataset using the trained model.
 
+## Understanding LSTMs 
+Long-Short-Term-Memory network is a sequential architecture that allows to solve long-term dependency problems. Remembering information for long periods of time is practically their default behavior. 
+[!LSTMs architecture](http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-chain.png)
+
+
 ## Dataset  
 1. Clone this repo: https://github.com/cocodataset/cocoapi  
 ```
