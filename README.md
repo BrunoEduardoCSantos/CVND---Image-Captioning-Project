@@ -28,6 +28,9 @@ Mathematically, the expression is the following:
 [image_1]: https://d17h27t6h515a5.cloudfront.net/topher/2017/November/5a0e2cc3_screen-shot-2017-11-16-at-4.26.22-pm/screen-shot-2017-11-16-at-4.26.22-pm.png 
 ![Learn gate][image_1] 
 
+where *i* is the ignoring factor given by a sigmoide between 0 and 1.
+
+
 
 
 ## Dataset  
