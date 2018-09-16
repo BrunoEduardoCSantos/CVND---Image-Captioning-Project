@@ -30,3 +30,10 @@ cd ..
 
 ## References
 * [Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) by Chris Olah
+
+
+## TODO
+* Use the validation set to guide your search for appropriate hyperparameters.
+* Implement beam search to generate captions on new images.
+* Tinker the model with attention to get research paper results
+* Use YOLO to object detection
