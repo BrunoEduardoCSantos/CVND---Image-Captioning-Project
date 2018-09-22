@@ -8,8 +8,8 @@ After using the Microsoft Common Objects in COntext (MS COCO) dataset to train  
 
 The project includes the following files:
 *  [model](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/model.py): containing the model architecture.
-* [training](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/2_Training.ipynb): data pre-processing and training pipeline .
-* [inference](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/3_Inference.ipynb): generate captions on test dataset using the trained model.
+* [training](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/2_Training%20.ipynb): data pre-processing and training pipeline .
+* [inference](https://github.com/BrunoEduardoCSantos/Image-Captioning/blob/master/3_Inference%20.ipynb): generate captions on test dataset using the trained model.
 
 ## Understanding LSTMs 
 Long-Short-Term-Memory network is a sequential architecture that allows to solve long-term dependency problems. Remembering information for long periods of time is practically their default behavior. 
@@ -46,6 +46,11 @@ Finally, we need to decide what we’re going to output, i.e., use gate aka new 
 [image_4]:  http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-focus-o.png
 ![Remeber gate][image_4] 
 
+## Methodology
+
+For the representation of images, it was used a Convolutional Neural Network (CNN). They have been widely used and
+studied for image tasks, and are currently state-of-the art for object recognition and detection. The particular choice of CNN uses a novel approach to batch normalization and yields the current best performance on the ILSVRC 2014 classification competition.
+
 
 
 ## Dataset  
@@ -74,6 +79,7 @@ cd ..
 
 ## References
 * [Understanding LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/) by Chris Olah
+* [Show and Tell: A Neural Image Caption Generator](https://arxiv.org/pdf/1411.4555.pdf) by  Oriol Vinyals et al
 
 
 ## TODO
