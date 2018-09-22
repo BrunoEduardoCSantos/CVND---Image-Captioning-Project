@@ -62,7 +62,8 @@ To select the embed and hidden size (=512) it was used  [this](https://arxiv.org
 
 Regarding the optimizer, Adam is currently recommended as the default algorithm to use, and often works slightly better than RMSProp. However, it is often also worth trying SGD+Nesterov Momentum as an alternative. The full Adam update also includes a bias correction mechanism, which compensates for the fact that in the first few time steps the vectors m,v are both initialized and therefore biased at zero, before they fully “warm up” (based on [this](http://cs231n.github.io/neural-networks-3/#ada) reference).
 
-Finally, for inference it was used a greedy algorithm where it find the maximum probability for each set of words in the output.
+Finally, for inference it was used a greedy algorithm where it find the maximum probability for each set of words in the output and returns the most likely word in the sequence.
+
 [image_5]: https://cdn-images-1.medium.com/max/800/1*vzFwXFJOrg6WRGNsYYT6qg.png
 ![General architecture][image_5] 
 
