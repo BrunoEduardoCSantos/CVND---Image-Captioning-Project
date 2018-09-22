@@ -43,7 +43,7 @@ The remember gate is just combining the forget and learning gate generating a ne
 
 Finally, we need to decide what we’re going to output, i.e., use gate aka new short-term memory. This output will be based on our cell state, but will be a filtered version. First, we run a sigmoid layer which decides what parts of the cell state we’re going to output. Then, we put the cell state through tanh (to push the values to be between −1 and 1) and multiply it by the output of the sigmoid gate, so that we only output the parts we decided to.
 
-[image_4]: http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-focus-C.png
+[image_4]:  http://colah.github.io/posts/2015-08-Understanding-LSTMs/img/LSTM3-focus-o.png
 ![Remeber gate][image_4] 
 
 
