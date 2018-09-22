@@ -51,13 +51,19 @@ Finally, we need to decide what we’re going to output, i.e., use gate aka new 
 For the representation of images, it was used a Convolutional Neural Network (CNN). They have been widely used and
 studied for image tasks, and are currently state-of-the art for object recognition and detection. The particular choice of CNN uses a novel approach to batch normalization and yields the current best performance on the ILSVRC 2014 classification competition. For a particular choice of CNN architecture it was used ResNet due to this [performance on object classification on ImageNet](https://github.com/jcjohnson/cnn-benchmarks).
 
-Regarding the decoder, the choice of sequence generator LSTM  is governed by its ability to dealwith vanishing and exploding gradients  the most common challenge in designing and training RNNs. To select the embed and hidden size (=512) I used 
-(this)[https://arxiv.org/pdf/1411.4555.pdf] paper. In addition,  Dropout was used to avoid overfitting. 
+Regarding the decoder, the choice of sequence generator LSTM  is governed by its ability to dealwith vanishing and exploding gradients  the most common challenge in designing and training RNNs. The following parameters were chosen to the LSTM architecture:
+* learning rate: 0.001
+* hidden size: 512
+* embed size: 512
+* number of LSTM cells: 1
+* batch size: 32
 
-[image_5]: https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2018/03/explain_2.png
+To select the embed and hidden size (=512) it was used  [this](https://arxiv.org/pdf/1411.4555.pdf) paper. In addition,  dropout was used to avoid overfitting. In LSTM architecture it was used one layer based on previous mentioned paper, but a larger hidden size to provide it with a "larger memory". As a next step, it could be used a two cell LSTM layer.
+
+Regarding the optmizer, Adam is currently recommended as the default algorithm to use, and often works slightly better than RMSProp. However, it is often also worth trying SGD+Nesterov Momentum as an alternative. The full Adam update also includes a bias correction mechanism, which compensates for the fact that in the first few time steps the vectors m,v are both initialized and therefore biased at zero, before they fully “warm up” (based on [this](http://cs231n.github.io/neural-networks-3/#ada) reference).
+
+[image_5]: https://cdn-images-1.medium.com/max/800/1*vzFwXFJOrg6WRGNsYYT6qg.png
 ![General architecture][image_5] 
-
-
 
 
 ## Dataset  
