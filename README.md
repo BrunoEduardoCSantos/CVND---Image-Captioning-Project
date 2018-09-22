@@ -49,7 +49,13 @@ Finally, we need to decide what we’re going to output, i.e., use gate aka new 
 ## Methodology
 
 For the representation of images, it was used a Convolutional Neural Network (CNN). They have been widely used and
-studied for image tasks, and are currently state-of-the art for object recognition and detection. The particular choice of CNN uses a novel approach to batch normalization and yields the current best performance on the ILSVRC 2014 classification competition.
+studied for image tasks, and are currently state-of-the art for object recognition and detection. The particular choice of CNN uses a novel approach to batch normalization and yields the current best performance on the ILSVRC 2014 classification competition. For a particular choice of CNN architecture it was used ResNet due to this [performance on object classification on ImageNet](https://github.com/jcjohnson/cnn-benchmarks).
+
+Regarding the decoder, the choice of sequence generator LSTM  is governed by its ability to dealwith vanishing and exploding gradients  the most common challenge in designing and training RNNs. To select the embed and hidden size (=512) I used (this)[https://arxiv.org/pdf/1411.4555.pdf] paper. In addition,  Dropout was used to avoid overfitting. 
+
+[image_4]: https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2018/03/explain_2.png
+![General architecture][image_5] 
+
 
 
 
