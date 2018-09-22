@@ -60,7 +60,7 @@ Regarding the decoder, the choice of sequence generator LSTM  is governed by its
 
 To select the embed and hidden size (=512) it was used  [this](https://arxiv.org/pdf/1411.4555.pdf) paper. In addition,  dropout was used to avoid overfitting. In LSTM architecture it was used one layer based on previous mentioned paper, but a larger hidden size to provide it with a "larger memory". As a next step, it could be used a two cell LSTM layer.
 
-Regarding the optmizer, Adam is currently recommended as the default algorithm to use, and often works slightly better than RMSProp. However, it is often also worth trying SGD+Nesterov Momentum as an alternative. The full Adam update also includes a bias correction mechanism, which compensates for the fact that in the first few time steps the vectors m,v are both initialized and therefore biased at zero, before they fully “warm up” (based on [this](http://cs231n.github.io/neural-networks-3/#ada) reference).
+Regarding the optimizer, Adam is currently recommended as the default algorithm to use, and often works slightly better than RMSProp. However, it is often also worth trying SGD+Nesterov Momentum as an alternative. The full Adam update also includes a bias correction mechanism, which compensates for the fact that in the first few time steps the vectors m,v are both initialized and therefore biased at zero, before they fully “warm up” (based on [this](http://cs231n.github.io/neural-networks-3/#ada) reference).
 
 [image_5]: https://cdn-images-1.medium.com/max/800/1*vzFwXFJOrg6WRGNsYYT6qg.png
 ![General architecture][image_5] 
