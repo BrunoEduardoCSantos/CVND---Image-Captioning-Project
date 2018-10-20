@@ -99,6 +99,7 @@ cd ..
 
 ## TODO
 * Use the validation set to guide your search for appropriate hyperparameters.
+* Implement BLUE score metric
 * Implement beam search to generate captions on new images.
 * Tinker the model with attention to get research paper results
 * Use YOLO to object detection
